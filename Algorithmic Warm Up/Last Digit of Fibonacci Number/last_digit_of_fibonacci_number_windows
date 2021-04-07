@@ -1,0 +1,10 @@
+#educational_plugin_window = if n <= 1:
+        return n
+
+    arr = [0, 1]
+
+    for d in range(2, n+1):
+        val = d if d <= 1 else arr[d-1] + arr[d-2]
+        arr.insert(d, val)
+
+    return arr[n] % 10
